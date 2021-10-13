@@ -1,10 +1,24 @@
-import logo from './logo.svg';
+import { useState } from "react";
+import{BrowserRouter as Router,Switch,Route} from "react-router-dom";
+import UserLogin from "./components/UserLogin";
+import Message from "./components/Message";
+import Home from "./components/Home";
 import './App.css';
 
-const App=()=> {
+function App() {
+  const [token, setToken] = useState();
+
+  if(!token) {
+    return <UserLogin setToken={setToken} />
+  }
   return (
     <div className="App">
-      
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/:groupId" component={Message}/>
+        </Switch>
+      </Router>
     </div>
   );
 }
