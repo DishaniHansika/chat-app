@@ -1,0 +1,11 @@
+{
+    "favorites.resources": [
+        "chat-app\\src\\useToken.js",
+        "chat-app\\src\\components\\Home.js",
+        "chat-app\\src\\components\\Message.js",
+        "chat-app\\src\\components\\OnlineUsers.js",
+        "chat-app\\src\\components\\UserLogin.js",
+        "server\\server.js",
+        "chat-app\\src\\App.js"
+    ]
+}

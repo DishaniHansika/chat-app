@@ -13,9 +13,7 @@ const NEW_CHAT_MESSAGE_EVENT = "newChatMessage";
 
 app.use(cors());
 app.use('/', (req, res) => {
-  res.send({
-    token: 'test113'
-  });
+  res.send(req);
 });
 
 io.on("connection", (socket) => {

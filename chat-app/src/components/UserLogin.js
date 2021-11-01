@@ -9,7 +9,7 @@ async function login(details) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(details),
-  }).then((data) => data.json());
+  }).then(data => data.json());
 }
 
 const UserLogin = ({ setToken }) => {
@@ -33,7 +33,7 @@ const UserLogin = ({ setToken }) => {
   };
   return (
     <div className="login">
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>
           <p>Username</p>
           <input type="text" onChange={handleUsername} />
@@ -43,7 +43,7 @@ const UserLogin = ({ setToken }) => {
           <input type="password" onChange={handlePassword} />
         </label>
         <div>
-          <button onClick={handleSubmit}>Submit</button>
+          <button type="submit">Submit</button>
         </div>
       </form>
     </div>
