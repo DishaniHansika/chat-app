@@ -33,7 +33,7 @@ const UserLogin = ({ setToken }) => {
   };
   return (
     <div className="login">
-      <form onSubmit={handleSubmit}>
+      <form>
         <label>
           <p>Username</p>
           <input type="text" onChange={handleUsername} />
@@ -43,7 +43,7 @@ const UserLogin = ({ setToken }) => {
           <input type="password" onChange={handlePassword} />
         </label>
         <div>
-          <button type="submit">Submit</button>
+          <button onClick={handleSubmit}>Submit</button>
         </div>
       </form>
     </div>
